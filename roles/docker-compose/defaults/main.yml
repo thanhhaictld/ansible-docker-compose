@@ -1,2 +1,4 @@
 ---
 # defaults file for deploy-dev
+# Compose CLI: "docker compose" (v2 plugin) or "docker-compose" (v1)
+compose_cmd: "docker compose"

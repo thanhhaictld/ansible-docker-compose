@@ -31,13 +31,13 @@
 - name: Pull new image
   args:
     chdir: "{{ item.working_directory }}"
-  command: docker-compose pull
+  command: "{{ compose_cmd }} pull"
   register: out
 
 - name: Force recreate update docker service
   args:
     chdir: "{{ item.working_directory }}"
-  command: docker-compose up -d
+  command: "{{ compose_cmd }} up -d"
   register: out
 
 - debug: var=out.stdout_lines
